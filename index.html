@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUGH DROPS | 创作空间</title>
+    <style>
+        /* 1. 基础装修 */
+        body { 
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: #fdfdfd; 
+            color: #333; 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        /* 2. 顶部标题 */
+        header { text-align: center; margin-bottom: 70px; }
+        header h1 { 
+            font-size: 3em; 
+            letter-spacing: 0.2em; 
+            font-weight: 200; 
+            margin: 0; 
+            text-transform: uppercase;
+            color: #2c3e50;
+        }
+        header .subtitle { 
+            color: #bdc3c7; 
+            font-size: 0.9em;
+            margin-top: 15px; 
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+        header .progress-text {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #88d8b0;
+            font-weight: bold;
+        }
+
+        /* 3. 导航网格 */
+        .nav-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 35px; 
+            max-width: 850px; 
+            width: 100%;
+        }
+
+        /* 4. 入口卡片 */
+        .nav-card {
+            background: white;
+            padding: 55px 35px;
+            border-radius: 2px; 
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            border-color: #2c3e50;
+        }
+
+        .en-title {
+            font-size: 0.7em;
+            letter-spacing: 0.4em;
+            color: #aaa;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .cn-title {
+            font-family: "Source Han Serif CN", "Songti SC", serif;
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
+
+        .function-tag {
+            font-size: 0.65em;
+            padding: 3px 12px;
+            border-radius: 50px;
+            margin-top: 15px;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            border: 1px solid transparent;
+        }
+
+        .description {
+            font-size: 0.8em;
+            color: #bdc3c7;
+            margin-top: 20px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* 各板块专属色点缀 - 已交换最后两项颜色 */
+        .card-syrup:hover { border-bottom: 4px solid #d4a373; }
+        .tag-syrup { background: #fffcf0; color: #d4a373; border-color: #f5e6d3; }
+
+        .card-frosting:hover { border-bottom: 4px solid #f8bbd0; }
+        .tag-frosting { background: #fff5f8; color: #f06292; border-color: #f8bbd0; }
+
+        /* 萃取使用了原来的蓝色系 */
+        .card-extract:hover { border-bottom: 4px solid #81d4fa; }
+        .tag-extract { background: #e1f5fe; color: #0288d1; border-color: #b3e5fc; }
+
+        /* 薄荷使用了原来的绿色系 */
+        .card-menthol:hover { border-bottom: 4px solid #81c784; }
+        .tag-menthol { background: #f1f8e9; color: #558b2f; border-color: #c5e1a5; }
+
+        @media (max-width: 600px) {
+            .nav-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cough Drops</h1>
+        <div class="subtitle">Creative Archives & Lab</div>
+        <div class="progress-text">● 建设进度：15% — 正在调制基底</div>
+    </header>
+
+    <div class="nav-grid">
+        <a href="#" class="nav-card card-syrup">
+            <span class="en-title">01. SYRUP</span>
+            <h2 class="cn-title">糖浆</h2>
+            <div class="function-tag tag-syrup">文本 / 故事 / 连载</div>
+            <p class="description">浓缩的文字记录，<br>滑过喉咙的长篇记忆。</p>
+        </a>
+
+        <a href="#" class="nav-card card-frosting">
+            <span class="en-title">02. FROSTING</span>
+            <h2 class="cn-title">糖霜</h2>
+            <div class="function-tag tag-frosting">绘画 / 插画 / 视觉</div>
+            <p class="description">色彩的鲜艳覆盖，<br>第一眼看到的视觉质感。</p>
+        </a>
+
+        <a href="#" class="nav-card card-extract">
+            <span class="en-title">03. EXTRACT</span>
+            <h2 class="cn-title">萃取</h2>
+            <div class="function-tag tag-extract">灵感 / 草稿 / WIP</div>
+            <p class="description">提炼中的有效成分，<br>尚未成型的实验记录。</p>
+        </a>
+
+        <a href="#" class="nav-card card-menthol">
+            <span class="en-title">04. MENTHOL</span>
+            <h2 class="cn-title">薄荷</h2>
+            <div class="function-tag tag-menthol">随笔 / 日志 / 瞬间</div>
+            <p class="description">散落的胡思乱想，<br>清凉呼吸的瞬间余韵。</p>
+        </a>
+    </div>
+
+</body>
+</html>
