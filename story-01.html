@@ -159,6 +159,39 @@
             h1.story-title { font-size: 2.4em; }
             .top-nav { left: 25px; right: 25px; top: 25px; }
         }
+
+        /* --- 🧪 幻觉转场特效开始 --- */
+
+/* 1. 定义动画：内容从模糊到清晰，从下方缓缓浮现 */
+@keyframes dreamyFadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(8px);       /* 起始：模糊，像刚喝下药水 */
+        transform: translateY(15px); /* 起始：位置稍微偏下 */
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);         /* 结束：清醒 */
+        transform: translateY(0);    /* 结束：回到原位 */
+    }
+}
+
+/* 2. 绑定到整个页面内容 */
+body {
+    /* 1.5s 是动画时间，可以让它显得很丝滑、粘稠 */
+    animation: dreamyFadeIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 3. 让链接在点击时有一点点“融化”的感觉 */
+a {
+    transition: all 0.4s ease;
+}
+a:active {
+    transform: scale(0.98);
+    filter: blur(2px); /* 点击瞬间微微模糊，增加幻觉感 */
+}
+
+/* --- 🧪 幻觉转场特效结束 --- */
     </style>
 </head>
 <body>
