@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROSTING | 糖霜 - 艺术廊</title>
+    <style>
+        body { 
+            font-family: "PingFang SC", sans-serif; 
+            background: #fff5f8; /* 淡淡的糖霜粉 */
+            color: #333; 
+            margin: 0; 
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .back-home { 
+            text-decoration: none; 
+            color: #f06292; 
+            font-size: 0.9em;
+            margin-bottom: 40px;
+            letter-spacing: 0.1em;
+        }
+        .header-section { text-align: center; margin-bottom: 50px; }
+        h1 { font-family: serif; font-size: 2.5em; margin: 0; color: #c2185b; }
+        
+        /* 画廊布局：自动排列 */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 30px; 
+            max-width: 1100px; 
+            width: 100%; 
+        }
+
+        /* 每一张画的容器 */
+        .art-card {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .art-card:hover { transform: translateY(-10px); }
+        
+        .art-card img { 
+            width: 100%; 
+            height: auto; 
+            display: block;
+            border-radius: 2px;
+        }
+
+        .art-info { margin-top: 15px; text-align: left; }
+        .art-title { font-weight: bold; font-size: 1.1em; color: #444; }
+        .art-date { font-size: 0.8em; color: #bbb; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home">← BACK TO SHELF / 返回架子</a>
+
+    <div class="header-section">
+        <h1>02. FROSTING / 糖霜</h1>
+        <p>色彩的鲜艳覆盖，第一眼看到的视觉质感。</p>
+    </div>
+
+    <div class="gallery">
+        <div class="art-card">
+            <img src="images/cover.jpg" alt="我的画作">
+            <div class="art-info">
+                <div class="art-title">第一件糖霜作品</div>
+                <div class="art-date">2026.03.06</div>
+            </div>
+        </div>
+
+        </div>
+
+</body>
+</html>
