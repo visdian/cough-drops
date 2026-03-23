@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYRUP | 浓缩糖浆 - 故事馆</title>
+    <style>
+        :root {
+            --syrup-main: #9b3309; /* 你指定的浓郁糖浆色 */
+            --parchment: #e0c9c3; /* 羊皮纸基色 */
+            --ink: #2c1810;      /* 深咖啡墨色 */
+        }
+
+        body { 
+            font-family: "Source Han Serif CN", "Songti SC", serif; 
+            /* 模拟羊皮纸的质感：使用了叠加的渐变和细微的噪点感 */
+            background-color: var(--parchment);
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: var(--ink); 
+            margin: 0; 
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 返回链接：像火漆印章或老标签 */
+        .back-home { 
+            text-decoration: none; 
+            color: var(--syrup-main); 
+            font-size: 0.8em;
+            margin-bottom: 50px;
+            letter-spacing: 0.2em;
+            border: 1px solid var(--syrup-main);
+            padding: 8px 20px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+        .back-home:hover { 
+            background: var(--syrup-main); 
+            color: var(--parchment);
+            box-shadow: 0 0 15px rgba(155, 51, 9, 0.3);
+        }
+
+        header h1 { 
+            font-family: sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.6em;
+            color: var(--syrup-main);
+            margin-bottom: 5px;
+        }
+        
+        .header-line {
+            width: 60px;
+            height: 2px;
+            background: var(--syrup-main);
+            margin: 20px auto;
+        }
+
+        /* 故事列表 */
+        .story-list { 
+            max-width: 650px; 
+            width: 100%; 
+            margin-top: 20px;
+        }
+
+        /* 故事条目：模拟旧药瓶上的手工标签 */
+        .story-item {
+            background: #fffdfa;
+            border: 1px solid #dcd0b8;
+            margin-bottom: 35px;
+            padding: 40px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            /* 稍微的一点倾斜感，增加手工贴标的感觉 */
+            transform: rotate(-0.5deg);
+        }
+
+        .story-item:hover {
+            transform: rotate(0deg) translateY(-5px);
+            box-shadow: 15px 15px 40px rgba(44, 24, 16, 0.1);
+            border-color: var(--syrup-main);
+        }
+
+        /* 编号与日期 */
+        .story-meta {
+            font-size: 0.75em;
+            color: var(--syrup-main);
+            letter-spacing: 0.15em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .story-title {
+            font-size: 1.6em;
+            margin: 0;
+            color: var(--ink);
+            line-height: 1.3;
+        }
+
+        .story-excerpt {
+            font-size: 0.95em;
+            color: #6d5e58;
+            margin-top: 20px;
+            line-height: 1.8;
+            /* 增加一点手写感 */
+            font-style: italic;
+        }
+
+        /* 右下角的装饰：像是一个盖上去的药剂编号印章 */
+        .bottle-code {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            font-family: monospace;
+            font-size: 0.7em;
+            color: #dcd0b8;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home">Back to CABINET / 返回陈列架</a>
+
+    <header>
+        <h1>SYRUP</h1>
+        <div class="header-line"></div>
+        <p style="color: var(--syrup-main); letter-spacing: 0.1em; font-size: 0.9em;">
+            — 封存于深色瓶中的流动记忆 —
+        </p>
+    </header>
+
+    <div class="story-list">
+        <a href="story-01.html" class="story-item">
+            <div class="story-meta">
+                <span>BATCH NO. 001</span>
+                <span>2026.03.23</span>
+            </div>
+            <h2 class="story-title">苦涩琥珀的初次萃取</h2>
+            <p class="story-excerpt">
+                “文字在深色玻璃瓶里发酵，产生出一种介于清醒与幻觉之间的粘稠感。第一滴糖浆滴落在纸页上时，羊皮纸发出了轻微的叹息……”
+            </p>
+            <div class="bottle-code">REF: SYP-9B3309</div>
+        </a>
+
+        <a href="#" class="story-item">
+            <div class="story-meta">
+                <span>BATCH NO. 002</span>
+                <span>UNDER PREPARATION</span>
+            </div>
+            <h2 class="story-title">尚未命名的浓缩液</h2>
+            <p class="story-excerpt">
+                正在进行第二次过滤，请保持室内阴凉干燥，静候灵感的沉淀。
+            </p>
+            <div class="bottle-code">REF: PENDING</div>
+        </a>
+    </div>
+
+</body>
+</html>
