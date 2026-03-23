@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATCH NO. 001 | 糖浆正文 - Cough Drops</title>
+    <style>
+        :root {
+            /* 调深核心色：增加粘稠感与对比度 */
+            --syrup-deep: #8a2d08; /* 深焦糖色 */
+            --parchment: #f4ece0;  /* 羊皮纸背景 */
+            --ink-black: #1a0f0a;  /* 浓缩墨色：极深咖啡，非纯黑 */
+            --paper-white: #fffdfa; /* 洁净标签纸 */
+        }
+
+        body { 
+            font-family: "Source Han Serif CN", "Songti SC", serif; 
+            background-color: var(--parchment);
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: var(--ink-black); 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 阅读容器 */
+        .reader-container {
+            max-width: 780px;
+            width: 100%;
+            background: var(--paper-white);
+            padding: 90px 70px;
+            box-shadow: 20px 0 80px rgba(44, 24, 16, 0.08);
+            border-left: 1px solid #e5dcd0;
+            border-right: 1px solid #e5dcd0;
+            position: relative;
+        }
+
+        /* 顶部导航：加粗加密 */
+        .top-nav {
+            position: absolute;
+            top: 40px;
+            left: 70px;
+            right: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--syrup-deep); /* 加厚底线 */
+            padding-bottom: 12px;
+        }
+
+        .back-link { 
+            text-decoration: none; 
+            color: var(--syrup-deep); 
+            font-size: 0.95em;
+            letter-spacing: 0.1em;
+            font-weight: 900; /* 极致加粗 */
+            text-transform: uppercase;
+        }
+
+        .shelf-code {
+            font-family: monospace;
+            font-size: 0.75em;
+            color: #b5a48b;
+            font-weight: bold;
+        }
+
+        /* 文章头部排版 */
+        header { 
+            margin-top: 60px; 
+            margin-bottom: 80px; 
+        }
+        
+        .story-batch {
+            font-size: 0.8em;
+            color: var(--syrup-deep);
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h1.story-title { 
+            font-size: 3.2em; 
+            margin: 0; 
+            color: var(--ink-black);
+            line-height: 1.2;
+            font-weight: 700;
+            /* 视觉增重：微小的重影效果 */
+            text-shadow: 1px 1px 0px rgba(138, 45, 8, 0.15);
+        }
+
+        .story-date {
+            font-size: 1em;
+            color: #888;
+            margin-top: 25px;
+            font-style: italic;
+            border-left: 3px solid #eee;
+            padding-left: 15px;
+        }
+
+        /* 正文内容：加深、加重 */
+        .story-content {
+            font-size: 1.2em; /* 调大字号，让眼睛更轻松 */
+            line-height: 2.1; 
+            color: var(--ink-black); /* 使用浓缩墨色 */
+            letter-spacing: 0.03em;
+        }
+
+        .story-content p {
+            margin: 0 0 40px 0;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        /* 强调段落：更有药方质感 */
+        .story-content .emphasis {
+            background: #fff8f0;
+            padding: 30px;
+            border: 1px dashed var(--syrup-deep);
+            border-left: 8px solid var(--syrup-deep);
+            color: var(--syrup-deep);
+            text-indent: 0;
+            margin: 50px 0;
+            font-weight: 600;
+            box-shadow: 10px 10px 0px rgba(138, 45, 8, 0.05);
+        }
+
+        /* 结尾印章 */
+        footer.story-footer {
+            margin-top: 120px;
+            border-top: 1px solid #e5dcd0;
+            padding-top: 50px;
+            text-align: center;
+        }
+        
+        .pharmacist-stamp {
+            display: inline-block;
+            border: 3px solid var(--syrup-deep);
+            padding: 12px 25px;
+            font-size: 0.8em;
+            color: var(--syrup-deep);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-weight: 900;
+            font-family: monospace;
+            transform: rotate(-2deg);
+            opacity: 0.7;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .reader-container { padding: 60px 25px; }
+            h1.story-title { font-size: 2.4em; }
+            .top-nav { left: 25px; right: 25px; top: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reader-container">
+        <nav class="top-nav">
+            <a href="syrup.html" class="back-link">← BACK TO SYRUP / 回到糖浆库</a>
+            <span class="shelf-code">BATCH: 001_9B3309</span>
+        </nav>
+
+        <header>
+            <span class="story-batch">Archive Phase: 01</span>
+            <h1 class="story-title">三座城市</h1>
+            <p class="story-date">Record Date: 2026.03.24</p>
+        </header>
+
+        <article class="story-content">
+            <p>
+                丰陇川，一片生机勃勃给人以希望的土地，横跨的河流滋养了整片大地，日照充足使得作物一年四季都茁壮成长，且产量十分可观。品质更是极好，餐厅里的菜肴，只要原材料是出自丰陇川，大抵能吸引比一般多三四倍的顾客。大部分居民都以农业为生，民风淳朴，住在一片区域的人们基本都互相认识，也常常举办各种庆典和节日，再加上本就有美丽的自然风景，实在是个度假胜地。不过，大家似乎都太无聊了，总想着发生点什么事才好。虽然完全可以自给自足，但有时候看着自己手里不多的钱财，还是会幻想生活在玄宵港灯红酒绿的生活，明明他们正在享用的美味佳肴都是从自己的手里种出来的。不过，幻想终归是幻想，不好好看着，都没注意隔壁家的羊又在吃自家麦子了。
+            </p>
+
+           
+            <p>
+                玄宵港，虽说每天几乎从睁眼到闭眼都是黑夜，但这里更像是一座不夜城。摩天大楼穿梭云间，高速列车飞驰而过，立交桥环绕整个城市，没有你开车到不了的地方。再说到生活，上到各种酒吧赌场，下到路边大排档和小吃摊，应有尽有。作为三个城市中的金融和商业中心，只有手里有足够的钱，那么整个城市都可以为你所用。然而，不论是谁，只要生活在玄宵港，你立刻就会知道，自己如何也飞不出头顶那密布的电缆，只能在拥挤的水泥街道中偶尔喘几口气。在霓虹灯闪烁的街头巷尾，总能看到许多醉得不像样的上班族，还有一些无处可去的流浪汉。而在灯光照不到的地方，则藏着更深的夜晚。
+            </p>
+
+            <p>
+                最后，如果想体验正常的日夜交替，那么钟穹将是你唯一的选择。这里是通向其他两座城市的唯一路径，可谓是交通命脉。火车铁路、蒸汽飞艇、路面电车，不同时代的交通产物汇聚在这片穹顶之下，却相得益彰。日新月异的科技令人叹为观止，不少人前来学习拜访，但终究只能学到一点皮毛。浓浓的烟雾弥漫在大街小巷，齿轮和机器的轰鸣声从早响到晚，也许并不是一个适合生活的好地方，但绝对是三座城市中最安全最有秩序的存在。但是，随着科技的不断进步，钟穹居民的伦理观也发生了巨大改变。手脚骨折？没关系，有最新的机械仿真手脚可以立即替换，功能比你的原生手脚还齐全。器官衰竭？不必担心，换上高度模拟的真人器官，能泵出比原来多三倍的力量。在这里，一切你觉得违反人类伦理的事情，都能得到看似合理的解释。
+            </p>
+        </article>
+
+        <footer class="story-footer">
+            <div class="pharmacist-stamp">
+                DISSOLVING / 正在溶解
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
