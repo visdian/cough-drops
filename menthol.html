@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENTHOL | 薄荷 - 瞬间余韵</title>
+    <style>
+        :root {
+            --menthol-main: #45d6c1; /* 清透的薄荷绿 */
+            --menthol-dark: #127ea1; /* 深海青 */
+            --mist: rgba(255, 255, 255, 0.8);
+        }
+
+        body { 
+            font-family: "PingFang SC", sans-serif; 
+            background: linear-gradient(135deg, #ddf1f4 40%, #c1e6e4 60%);
+            color: #445566; 
+            margin: 0; 
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 返回链接：像一片轻飘飘的叶子 */
+        .back-home { 
+            text-decoration: none; 
+            color: var(--menthol-dark); 
+            font-size: 0.8em;
+            margin-bottom: 50px;
+            letter-spacing: 0.2em;
+            border: 1px dashed var(--menthol-main);
+            padding: 6px 18px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .back-home:hover { background: var(--menthol-main); color: white;transform: scale(1.05); box-shadow: 0 5px 15px rgba(69, 214, 193, 0.3);}
+
+        header { text-align: center; margin-bottom: 60px; }
+        header h1 { 
+            font-weight: 330;
+            letter-spacing: 0.8em;
+            color: var(--menthol-dark);
+            text-transform: uppercase;
+        }
+
+        /* 碎碎念容器：自由排列 */
+        .memo-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 25px; 
+            max-width: 1000px; 
+            width: 100%; 
+        }
+
+        /* 每一条碎碎念：像一张透明的便签 */
+        .memo-card {
+            background: var(--mist);
+            backdrop-filter: blur(5px);
+            padding: 25px;
+            border-radius: 2px;
+            border-top: 3px solid var(--menthol-main);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .memo-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 25px 50px rgba(114, 239, 221, 0.35);
+        }
+
+        .memo-date {
+           font-size: 0.65em;
+    color: var(--menthol-dark);
+    opacity: 0.7;
+    letter-spacing: 0.2em;
+        }
+
+
+        .memo-content {
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #556677;
+        }
+
+        /* 装饰：右上角的小气泡，增加致幻感 */
+        .memo-card::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 8px;
+            height: 8px;
+            background: var(--menthol-main);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        /* 载入动画（记得把你刚学的那个也加上） */
+        @keyframes vaporize {
+            0% { opacity: 0; filter: blur(15px); transform: scale(1.05); }
+            100% { opacity: 1; filter: blur(0); transform: scale(1); }
+        }
+        body { animation: vaporize 1.2s ease-out forwards; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home">EXIT MENTHOL / 离开</a>
+
+    <header>
+        <h1>MENTHOL</h1>
+        <p style="color: var(--menthol-main); font-size: 0.8em; letter-spacing: 0.3em;">
+            呼吸的瞬间余韵
+        </p>
+    </header>
+
+    <div class="memo-grid">
+        <div class="memo-card">
+            <span class="memo-date">2026.03.24 / 14:15</span>
+            <div class="memo-content">
+                刚喝了一口冰水，突然觉得今天阳光的颜色很像刚剥开的柠檬。
+            </div>
+        </div>
+
+        <div class="memo-card">
+            <span class="memo-date">2026.03.24 / 09:00</span>
+            <div class="memo-content">
+                有时候，空白的比喻比文字更有力。
+            </div>
+        </div>
+
+        <div class="memo-card">
+            <span class="memo-date">2026.03.23 / NIGHT</span>
+            <div class="memo-content">
+                <img src="images/你的画名.jpg" style="width: 100%; border-radius: 4px; margin-bottom: 10px;">
+                一张半夜睡不着涂出来的色块练习。
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
